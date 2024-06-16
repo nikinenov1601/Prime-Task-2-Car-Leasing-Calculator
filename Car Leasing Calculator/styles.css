@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.full-container {
+    background-color: #fff;
+    padding: 25px 0px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    width: 600px;
+}
+
+h1 {
+    color: #000000;
+    text-align:center;
+    font-weight: 900;
+    margin: 5px;
+}
+
+.carLeasingCalculator-container {
+    border-bottom: 3px solid #D8D8D8;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    align-items: center;
+}
+
+
+.carLeasingCalculator-container > div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 50px 10px 10px;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 560;
+    margin-bottom: 5px;
+}
+
+input[type = "number"], select{
+    padding: 6px;
+    border: 1px ridge #D8D8D8;
+    font-weight: 500;
+}
+
+input[type = "range"]{
+    margin-top: 31px;
+    margin-bottom: 36px;
+}
+
+
+h2{
+    color: #000000;
+    text-align:center;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.leasing-details-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0px 10px 15px;
+    align-items: center;
+}
+
+.leasing-details-container > div > p{
+    align-items: center;
+    margin: 5px 10px;
+    font-weight: 600;
+}
+.left-leasing-details-container{
+    margin-right: 33px;
+    border-right: 1px solid black;
+
+}
+
+@media only screen and (max-width: 360px) {  /* Target screens less than 600px wide */
+
+    .full-container{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    h1{
+        width: 98%;
+        text-align: left;
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+    h2{
+        text-align: center;
+        padding-left: 10px;
+    }
+
+    .carLeasingCalculator-container,
+    .leasing-details-container {
+      padding: 10px 5px; /* Adjust padding for better spacing */
+    }
+  
+    input[type="range"]{
+        margin: 20px 0px;
+    }
+
+    .carLeasingCalculator-container > div,
+    .leasing-details-container > div {
+      margin: 5px 0px; /* Adjust margins for better spacing */
+    }
+  
+    /* Single column layout for mobile */
+    .carLeasingCalculator-container,
+    .leasing-details-container {
+      display: block; /* Remove flexbox for single column */
+    }
+
+    .leasing-details-container > div > p{
+        margin: 0px;
+    }
+  
+    .left-leasing-details-container > div:nth-child(2) {
+        margin-bottom: 20px;
+    }
+    .right-leasing-details-container{
+        padding-top: 5px;
+    }
+  
+    /* Adjust input field width */
+    input[type="number"],
+    select {
+      width: 100%; /* Reduce input width */
+    }
+}
